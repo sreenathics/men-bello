@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<title>About Section</title>
+<style>
+
+    body {
+        
+        font-family: 'Arial', sans-serif;
+        background: #ffffff;
+        color: #0b2d3a;
+    }
+    .main-header {
+  background-color: #082f4d;
+  padding: 10px 0;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.logo-area img {
+  width: 180px;
+  height: auto;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.home-icon {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+
+    /* HERO / STORY SECTION */
+    .story-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 5%;
+        background: url('about2') center/cover no-repeat;
+        color: black;
+        background-position: 40px -30px;
+    }
+    .story-text {
+        max-width: 550px;
+    }
+    .story-text h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    .story-text p {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .story-img img {
+        width: 500px;
+        border-radius: 10px;
+    }
+
+    /* VISION & MISSION SECTION */
+    .vision-mission-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        padding: 80px 5%;
+    }
+    .vm-card {
+        background: #0d324f center/cover;
+        color: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .vm-card h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+    .vm-card p {
+        line-height: 1.7;
+        font-size: 18px;
+    }
+
+    /* PROMISE SECTION */
+    .promise-section {
+        margin-top: 80px;
+        background: url('proimg') center/cover no-repeat;
+        padding: 120px 5%;
+        text-align: center;
+        color: #0b2d3a;
+    }
+    .promise-section h1 {
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+    .promise-section p {
+        font-size: 20px;
+        max-width: 750px;
+        margin: auto;
+        line-height: 1.7;
+    }
+
+    footer {
+      background-color:#0d324f;
+      color: #fff;
+      padding: 50px 8%;
+      position: relative;
+   
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      gap: 30px;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .footer-col h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .footer-col p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .subscribe-box {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    .subscribe-box input {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .subscribe-box button {
+      background-color: #555;
+      color: #fff;
+      border: none;
+      padding: 10px 12px;
+      font-weight: 600;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .subscribe-box button:hover {
+      background-color: #c62828;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .footer-links li a {
+      text-decoration: none;
+      color: #ccc;
+      transition: 0.3s;
+    }
+
+    .footer-links li a:hover {
+      color: #fff;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      background-color:#fff;
+      color:#a10702;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .app-links img {
+      height: 40px;
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+
+    .most-searched {
+      border-top: 1px solid #444;
+      padding-top: 25px;
+      margin-top: 25px;
+    }
+
+    .most-searched h4 {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .keywords {
+      color: #ccc;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .keywords span {
+      border-left: 1px solid #666;
+      padding-left: 6px;
+      margin-left: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+     @media (max-width: 390px) {
+      .subscribe-box {
+        flex-direction: column;
+      }
+
+      .subscribe-box input,
+      .subscribe-box button {
+        width: 100%;
+        border-radius: 4px;
+      }
+
+      .subscribe-box button {
+        margin-top: 8px;
+      }
+    }
+</style>
+</head>
+<body>
+<header class="main-header">
+  <div class="header-inner">
+    <a href="javascript:history.back()" class="logo-area">
+      <img src="men1.png" alt="Men Bello" />
+    </a>
+
+    <h5 class="page-title">About Us</h5>
+
+    <a href="home.html" class="home-icon">
+      <i class="bi bi-house"></i>
+    </a>
+  </div>
+</header>
+
+
+<!-- STORY / HERO -->
+<section class="story-section">
+    <div class="story-text">
+        <h1>THE MEN BELLO STORY</h1>
+        <p>
+            Time – a man’s most valuable asset! In the hustle of life, self‑care often gets
+            neglected. At MEN BELLLO, we get the struggle of navigating a sea of grooming
+            products. That’s why we’ve simplified it for you with just 5 essentials for a
+            complete grooming routine. Reclaim your time and effortlessly meet your
+            self‑care goals with MEN BELLO.
+        </p>
+    </div>
+    <div class="story-img">
+    
+    </div>
+</section>
+
+<!-- VISION & MISSION -->
+<section class="vision-mission-section">
+    <div class="vm-card">
+        <h2>Vision</h2>
+        <p>
+            At MEN BELLO, our vision is to redefine the standards of men's grooming by providing
+            innovative, easy‑to‑use products that integrate into every man’s daily routine. We
+            aim to be the go‑to brand for men seeking quick, effective grooming solutions.
+        </p>
+    </div>
+    <div class="vm-card">
+        <h2>Mission</h2>
+        <p>
+            At MEN BELLO, we aim to revolutionise the modern man's grooming routine with
+            high‑quality products catering to their daily essentials. We strive to empower men
+            to look and feel their best every day with meticulously crafted grooming
+            solutions that enhance confidence, style, and well‑being.
+        </p>
+    </div>
+</section>
+
+<!-- PROMISE SECTION -->
+<section class="promise-section">
+    <h1>OUR PROMISE, BETTER YOU</h1>
+    <p>
+        At MEN BELLO, we’re all about swift and effective results, catering to the preferences
+        of modern men who love straightforward solutions. We understand the need for
+        simplicity, and our commitment is to make your grooming experience fast and
+        efficient.
+    </p>
+</section>
+<footer>
+  <div class="footer-top">
+    <!-- Stay in touch -->
+    <div class="footer-col">
+      <h3>STAY IN TOUCH:</h3>
+      <p>Get exclusive deals & access to new launches. We won't spam promise</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email here">
+        <button>Subscribe</button>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-col">
+      <h3>CATEGORIES</h3>
+      <ul class="footer-links">
+        <li><a href="#">Beard</a></li>
+        <li><a href="#">Fragrance</a></li>
+        <li><a href="#">Hair</a></li>
+        <li><a href="#">Tools & Accessories</a></li>
+        <li><a href="#">Face</a></li>
+        <li><a href="#">Shave</a></li>
+        <li><a href="#">Body</a></li>
+      </ul>
+    </div>
+
+    <!-- Important Links -->
+    <div class="footer-col">
+      <h3>IMPORTANT LINKS</h3>
+      <ul class="footer-links">
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">TMC in News</a></li>
+        <li><a href="#">Our Ingredients</a></li>
+        <li><a href="#">Partner with Us</a></li>
+        <li><a href="#">B2B Bulk Buying</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h3>GET SOCIAL WITH US</h3>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div>
+      <div class="app-links">
+        <img src="gpicon2" alt="Google Play">
+        <img src="appi2" alt="App Store">
+      </div>
+    </div>
+  </div>
+
+  <!-- Most searched -->
+  <div class="most-searched">
+    <h4>MOST SEARCHED</h4>
+    <p class="keywords">
+      tan removal for men<span>EDP Hope</span><span>sunscreen for men</span><span>summer skin care</span>
+      <span>face serum for men</span><span>best body wash for men</span><span>vitamin c serum</span>
+      <span>lip balm for men</span><span>deo for men</span><span>hair wax for men</span><span>face scrub for men</span>
+      <span>shaving kit</span><span>body lotion</span><span>perfume</span><span>gift hampers</span>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

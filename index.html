@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEN BELLO</title>
+
+  <link rel="icon" type="image/png" href="mb2.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Top Header -->
+<header class="py-2 top-header">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap">
+
+    <a href="#" class="mb-2 mb-lg-0">
+      <img src="mbicon1.png" style="width:180px;" height="30px">
+    </a>
+
+    <!-- Search Section -->
+    <div class="d-flex search-wrapper mx-lg-4 mb-2 mb-lg-0">
+      <input type="text" class="form-control search-input" placeholder="Search...">
+      <select class="form-select category-select">
+        <option>ALL</option>
+        <option>FACE WASH</option>
+        <option>PERFUME</option>
+        <option>SERUM</option>
+        <option>SUNSCREEN</option>
+        <option>MOISTURIZER</option>
+      </select>
+      <button class="btn search-btn"><i class="bi bi-search"></i></button>
+    </div>
+
+    <!-- Icons -->
+    <div class="d-flex align-items-center">
+      <a href="login.html" class="text-white me-3 fs-5"><i class="bi bi-person"></i></a>
+
+      <a href="cart.html" class="text-white fs-6 mx-4 position-relative">
+        <i class="bi bi-cart"></i>
+        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<!-- Navigation Menu -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom">
+  <div class="container">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="#" class="nav-link mx-lg-5">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#cat" class="nav-link mx-lg-5">Categories</a></li>
+        <li class="nav-item"><a href="login.html" class="nav-link mx-lg-5">Contact</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link mx-lg-5">Blog</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <div class="fbg">
+    <h1>Pure Care for the Modern Gentleman</h1>
+    <p style="text-align:center">
+      Experience nature-powered grooming products designed to refresh and protect your skin.<br>
+      Discover premium essentials made for the modern man. Look sharp, feel confident, every day.</p>
+      <br>
+    <div class="button-container">
+                <a href="#" class="btn2">Explore Now</a>
+                <a href="#" class="btn btn-outline">Learn More</a>
+            </div>  </div>
+
+  <!-- Categories -->
+  <div class="category-container" id="cat">
+
+    <div class="category">
+      <a href="#best">
+        <img src="cabs" alt="Bestsellers">
+        <span>Bestsellers</span>
+      </a>
+    </div>
+
+    <div class="category">
+      <a href="sc.html">
+        <img src="casc" alt="Skincare">
+        <span>Skincare</span>
+      </a>
+    </div>
+
+    <div class="category">
+      <a href="facewash.html">
+        <img src="caf" alt="Face Wash">
+        <span>Face Wash</span>
+      </a>
+    </div>
+
+    <div class="category">
+      <a href="serum.html">
+        <img src="cas" alt="Serums">
+        <span>Serums</span>
+      </a>
+    </div>
+
+    <div class="category">
+      <a href="perfume.html">
+        <img src="cap" alt="Perfumes">
+        <span>Perfumes</span>
+      </a>
+    </div>
+
+    <div class="category">
+      <a href="mois.html">
+        <img src="cam" alt="Moisturisers">
+        <span>Moisturisers</span>
+      </a>
+    </div>
+
+  </div>
+
+<!-- Marquee Banner -->
+<div class="marquee-banner">
+  <marquee behavior="scroll" direction="left" scrollamount="8">
+    🔥 Big Sale Today! | Free Shipping on Orders Above ₹499 | New Collections Added! 🔥 🔥 Big Sale Today! | Free Shipping on Orders Above ₹499 | New Collections Added! 🔥 🔥 Big Sale Today! | Free Shipping on Orders Above ₹499 | New Collections Added! 🔥
+  </marquee>
+</div>
+
+<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+  
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="banner.jpg" class="d-block w-100 banner-img" alt="Banner 1">
+    </div>
+
+    <div class="carousel-item">
+      <img src="salebanner.jpg" class="d-block w-100 banner-img" alt="Banner 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="perbaner2.jpg" class="d-block w-100 banner-img" alt="Banner 3">
+    </div>
+
+  </div>
+
+</div>
+
+
+  <!-- Products Section 1 -->
+  <section class="py-5 product-section">
+    <div class="container text-center">
+
+      <h2 class="fw-bold" id="best">Our Best Selling in Men's Skin Care & Grooming</h2>
+      <hr class="divider">
+
+      <div class="row g-4 mt-4">
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="face123.jpg">
+            <div class="stars">★★★★★ <span>1554 reviews</span></div>
+            <h5>ACNO FIGHT FACEWASH for Men</h5>
+            <p class="price">$10</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="nightper.jpg">
+            <div class="stars">★★★★★ <span>1544 reviews</span></div>
+            <h5>NIGHT | EAU DE PERFUME</h5>
+            <p class="price">From $50</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="serum.jpg">
+            <div class="stars">★★★★★ <span>1470 reviews</span></div>
+            <h5>VITAMIN C MEN SERUM</h5>
+            <p class="price">$15</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="mois.jpg">
+            <div class="stars">★★★★★ <span>1291 reviews</span></div>
+            <h5>Daily Essential Face Moisturizer</h5>
+            <p class="price">From $20</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section 2 -->
+  <section class="py-5 product-section2">
+    <div class="container text-center2">
+
+      <div class="row g-4 mt-4">
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card2">
+            <img src="bodyper.jpg">
+            <div class="stars2">★★★★★ <span>1554 reviews</span></div>
+            <h5>BLUE BODY PERFUME</h5>
+            <p class="price">$40</p>
+            <button class="btn2 btn-dark2 w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card2">
+            <img src="lipc2.jpg">
+            <div class="stars2">★★★★★ <span>1544 reviews</span></div>
+            <h5>LIGHTENING LIP SCRUB</h5>
+            <p class="price2">From $12</p>
+            <button class="btn2 btn-dark2 w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card2">
+            <img src="charcoalf.jpg">
+            <div class="stars2">★★★★★ <span>1470 reviews</span></div>
+            <h5>CHARCOAL FACE WASH</h5>
+            <p class="price2">$10</p>
+            <button class="btn2 btn-dark2 w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card2">
+            <img src="beard1.jpg">
+            <div class="stars2">★★★★★ <span>1291 reviews</span></div>
+            <h5>BEARD OIL</h5>
+            <p class="price2">From $20</p>
+            <button class="btn2 btn-dark2 w-100">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features-section py-5 text-center" style="margin-top: 450px;">
+    <div class="container">
+
+      <div class="row justify-content-center">
+
+        <div class="col-6 col-md-3 mb-4">
+          <img src="dermo" class="feature-icon mb-3">
+          <h6>Dermatologically Tested</h6>
+        </div>
+
+        <div class="col-6 col-md-3 mb-4">
+          <img src="dermo" class="feature-icon mb-3">
+          <h6>Crafted for India’s Climate</h6>
+        </div>
+
+        <div class="col-6 col-md-3 mb-4">
+          <img src="dermo" class="feature-icon mb-3">
+          <h6>Vegan</h6>
+        </div>
+
+        <div class="col-6 col-md-3 mb-4">
+          <img src="dermo" class="feature-icon mb-3">
+          <h6>No Aluminium, PEGs, Alcohol, Parabens</h6>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="review-section py-5" style="margin-top:-50px">
+   <div class="container text-center"> 
+    <h2 class="fw-bold">Reviewed By Customers</h2>
+     <p class="text-muted">What Our Customers Think About Us?</p> 
+     <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"> 
+      <div class="carousel-inner">
+       <!-- Slide 1 --> 
+       <div class="carousel-item active">
+        <div class="row justify-content-center"> 
+          <div class="col-md-5 mb-4"> 
+            <div class="review-card d-flex align-items-center p-3 rounded">
+             <img src="rimg" class="review-img rounded-start" alt="Customer 1">
+              <div class="ms-3 text-start text-light"> 
+                <div class="stars mb-2">
+                 <i class="bi bi-star-fill text-warning"></i>
+                 <i class="bi bi-star-fill text-warning"></i>
+                 <i class="bi bi-star-fill text-warning"></i>
+                 <i class="bi bi-star-fill text-warning"></i>
+                 <i class="bi bi-star-fill text-warning"></i> 
+               </div> <p>Finally, I’ve found a grooming brand that understands my specific needs. Game-changer!</p> 
+               <h6 class="fw-bold mb-0">Aryan Khanna</h6>
+                </div>
+                 </div>
+                  </div>
+                   <div class="col-md-5 mb-4"> 
+                    <div class="review-card d-flex align-items-center p-3 rounded"> 
+                      <img src="rimg" class="review-img rounded-start" alt="Customer 2">
+                       <div class="ms-3 text-start text-light">
+                        <div class="stars mb-2"> 
+                          <i class="bi bi-star-fill text-warning"></i>
+                          <i class="bi bi-star-fill text-warning"></i>
+                          <i class="bi bi-star-fill text-warning"></i>
+                          <i class="bi bi-star-fill text-warning"></i>
+                          <i class="bi bi-star text-warning"></i> 
+                        </div>
+                         <p>The quality and effectiveness of these products are unmatched. My grooming routine has never been easier.</p>
+                          <h6 class="fw-bold mb-0">Pravin Patil</h6>
+                           </div>
+                            </div>
+                             </div>
+                              </div> 
+                            </div>
+                             <!-- Slide 2 --> 
+                             <div class="carousel-item">
+                              <div class="row justify-content-center">
+                               <div class="col-md-5 mb-4"> 
+                                <div class="review-card d-flex align-items-center p-3 rounded">
+                                 <img src="rimg" class="review-img rounded-start" alt="Customer 3"> 
+                                 <div class="ms-3 text-start text-light"> 
+                                  <div class="stars mb-2"> 
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i> 
+                                  </div>
+                                   <p>Amazing experience! The delivery was quick, and the products are always fresh.</p> 
+                                   <h6 class="fw-bold mb-0">Simran Kaur</h6>
+                                    </div> 
+                                  </div> 
+                                </div> 
+                                <div class="col-md-5 mb-4">
+                                 <div class="review-card d-flex align-items-center p-3 rounded"> 
+                                  <img src="rimg" class="review-img rounded-start" alt="Customer 4"> 
+                                  <div class="ms-3 text-start text-light"> 
+                                    <div class="stars mb-2">
+                                     <i class="bi bi-star-fill text-warning"></i>
+                                     <i class="bi bi-star-fill text-warning"></i>
+                                     <i class="bi bi-star-fill text-warning"></i>
+                                     <i class="bi bi-star-fill text-warning"></i>
+                                     <i class="bi bi-star text-warning"></i>
+                                      </div> <p>A reliable and trustworthy brand. I recommend it to all my friends and family!</p>
+                                       <h6 class="fw-bold mb-0">Rahul Mehta</h6>
+                                        </div>
+                                         </div>
+                                          </div> 
+                                        </div> 
+                                      </div>
+                                       <!-- Slide 3 --> 
+                                       <div class="carousel-item"> 
+                                        <div class="row justify-content-center">
+                                         <div class="col-md-5 mb-4"> 
+                                          <div class="review-card d-flex align-items-center p-3 rounded">
+                                           <img src="rimg" class="review-img rounded-start" alt="Customer 5">
+                                            <div class="ms-3 text-start text-light"> <div class="stars mb-2">
+                                             <i class="bi bi-star-fill text-warning"></i>
+                                             <i class="bi bi-star-fill text-warning"></i>
+                                             <i class="bi bi-star-fill text-warning"></i>
+                                             <i class="bi bi-star-fill text-warning"></i>
+                                             <i class="bi bi-star-fill text-warning"></i>
+                                              </div> <p>Excellent packaging and super fresh produce. Highly satisfied with the service.</p>
+                                               <h6 class="fw-bold mb-0">Anjali Verma</h6>
+                                                </div> 
+                                              </div> 
+                                            </div>
+                                             <div class="col-md-5 mb-4">
+                                              <div class="review-card d-flex align-items-center p-3 rounded">
+                                               <img src="rimg" class="review-img rounded-start" alt="Customer 6"> 
+                                               <div class="ms-3 text-start text-light">
+                                                <div class="stars mb-2"> 
+                                                  <i class="bi bi-star-fill text-warning"></i>
+                                                  <i class="bi bi-star-fill text-warning"></i>
+                                                  <i class="bi bi-star-fill text-warning"></i>
+                                                  <i class="bi bi-star text-warning"></i>
+                                                  <i class="bi bi-star text-warning"></i> 
+                                                </div> <p>Love the variety and freshness. Definitely my go-to online grocery store.</p>
+                                                 <h6 class="fw-bold mb-0">Vikram Singh</h6>
+                                                  </div>
+                                                   </div>
+                                                    </div> 
+                                                  </div>
+                                                   </div> 
+                                                 </div>
+                                                  <!-- Indicators --> 
+                                                  <div class="carousel-indicators mt-4"> 
+                                                <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active"></button>
+                                                 <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1"></button>
+                                                  <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2"></button>
+                                                   </div>
+                                                    </div> 
+                                                  </div>
+                                                   </section>
+<footer>
+  <div class="footer-top">
+    <!-- Stay in touch -->
+    <div class="footer-col">
+      <h3>STAY IN TOUCH:</h3>
+      <p>Get exclusive deals & access to new launches. We won't spam promise</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email here">
+        <button>Subscribe</button>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-col">
+      <h3>CATEGORIES</h3>
+      <ul class="footer-links">
+        <li><a href="#">Beard</a></li>
+        <li><a href="#">Fragrance</a></li>
+        <li><a href="#">Hair</a></li>
+        <li><a href="#">Tools & Accessories</a></li>
+        <li><a href="#">Face</a></li>
+        <li><a href="#">Shave</a></li>
+        <li><a href="#">Body</a></li>
+      </ul>
+    </div>
+
+    <!-- Important Links -->
+    <div class="footer-col">
+      <h3>IMPORTANT LINKS</h3>
+      <ul class="footer-links">
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">TMC in News</a></li>
+        <li><a href="#">Our Ingredients</a></li>
+        <li><a href="#">Partner with Us</a></li>
+        <li><a href="#">B2B Bulk Buying</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h3>GET SOCIAL WITH US</h3>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div>
+      <div class="app-links">
+        <img src="gpicon2" alt="Google Play">
+        <img src="appi2" alt="App Store">
+      </div>
+    </div>
+  </div>
+
+  <!-- Most searched -->
+  <div class="most-searched">
+    <h4>MOST SEARCHED</h4>
+    <p class="keywords">
+      tan removal for men<span>EDP Hope</span><span>sunscreen for men</span><span>summer skin care</span>
+      <span>face serum for men</span><span>best body wash for men</span><span>vitamin c serum</span>
+      <span>lip balm for men</span><span>deo for men</span><span>hair wax for men</span><span>face scrub for men</span>
+      <span>shaving kit</span><span>body lotion</span><span>perfume</span><span>gift hampers</span>
+    </p>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+let myCarousel = document.querySelector('#bannerCarousel');
+let carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 3000,   // 3 seconds
+  ride: "carousel"
+});
+</script>
+
+  <!-- Add to Cart -->
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function updateCartCount() {
+      const cartCount = document.getElementById("cart-count");
+      if (cartCount) cartCount.textContent = cart.length;
+    }
+
+    function saveCart() {
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+    }
+
+    function addToCart(product) {
+      cart.push(product);
+      saveCart();
+      alert(`${product.name} added to cart!`);
+    }
+
+    document.querySelectorAll(".product-card button, .product-card2 button")
+      .forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          const card = e.target.closest(".product-card, .product-card2");
+          const name = card.querySelector("h5").innerText.trim();
+          const price = card.querySelector(".price, .price2").innerText.trim();
+          const img = card.querySelector("img").src;
+          addToCart({ name, price, img });
+        });
+      });
+
+    updateCartCount();
+  </script>
+
+  <!-- Auto Popup Modal -->
+  <script>
+    setTimeout(() => {
+      const offerModal = new bootstrap.Modal(document.getElementById('offerModal'));
+      offerModal.show();
+    }, 5000);
+  </script>
+ 
+
+</body>
+
+</html>

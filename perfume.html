@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Skin Care & Grooming</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    /* Section Title */
+    .section-title {
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Product Card */
+    .product-card {
+      
+      border: none;
+      text-align: center;
+      padding: 25px 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      max-width: 230px;
+      margin: 0 auto 20px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    .product-price {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .product-card .btn {
+      margin-top: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      border-radius: 0;
+    }
+
+    .review-stars {
+      color: #000;
+      font-size: 0.9rem;
+    }
+
+    hr {
+      margin: 70px 0;
+      border-top: 2px solid #eee;
+    }
+
+    footer {
+      background-color:#0d324f;
+      color: #fff;
+      padding: 50px 8%;
+      position: relative;
+      
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      gap: 30px;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .footer-col h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .footer-col p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .subscribe-box {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    .subscribe-box input {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .subscribe-box button {
+      background-color: #555;
+      color: #fff;
+      border: none;
+      padding: 10px 12px;
+      font-weight: 600;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .subscribe-box button:hover {
+      background-color: #c62828;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .footer-links li a {
+      text-decoration: none;
+      color: #ccc;
+      transition: 0.3s;
+    }
+
+    .footer-links li a:hover {
+      color: #fff;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      background-color: #fff;
+      color: #a10702;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .app-links img {
+      height: 40px;
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+
+    .most-searched {
+      border-top: 1px solid #444;
+      padding-top: 25px;
+      margin-top: 25px;
+    }
+
+    .most-searched h4 {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .keywords {
+      color: #ccc;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .keywords span {
+      border-left: 1px solid #666;
+      padding-left: 6px;
+      margin-left: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .subscribe-box {
+        flex-direction: column;
+      }
+
+      .subscribe-box input,
+      .subscribe-box button {
+        width: 100%;
+        border-radius: 4px;
+      }
+
+      .subscribe-box button {
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+   <header class="py-2" style="background-color: #082f4d;">
+    <div class="container d-flex justify-content-between align-items-center text-white">
+      <a href="javascript:history.back()"><img src="men1.png" style="width:180px" height="30px"></a>
+      <h5 class="m-0">Your Shopping Cart</h5>
+      <a href="home.html" class="text-white fs-5"><i class="bi bi-house"></i></a>
+    </div>
+  </header>
+
+  <!-- SECTION 1 -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Our Best Selling in Men's Skin Care & Grooming</h2>
+
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="nightper.jpg" alt="Eye Cream">
+            <div class="review-stars">★★★★★ 1554 reviews</div>
+            <h5 class="product-title">Restoring Eye Cream for Men</h5>
+            <p class="product-price">$40</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="perhtml.jpg" alt="Face Scrub">
+            <div class="review-stars">★★★★★ 1544 reviews</div>
+            <h5 class="product-title">Renewing Face Scrub for Men</h5>
+            <p class="product-price">From $12</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="bodyper.jpg" alt="Anti-Aging Cream">
+            <div class="review-stars">★★★★★ 1470 reviews</div>
+            <h5 class="product-title">Revitalizing Anti-Aging Cream</h5>
+            <p class="product-price">$40</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="perhtml.jpg" alt="Face Moisturizer">
+            <div class="review-stars">★★★★★ 1291 reviews</div>
+            <h5 class="product-title">Daily Essential Face Moisturizer</h5>
+            <p class="product-price">From $20</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- SECTION 2 -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Customer Favorites in Men's Grooming</h2>
+
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="nightper.jpg" alt="Face Wash">
+            <div class="review-stars">★★★★★ 1430 reviews</div>
+            <h5 class="product-title">Purifying Charcoal Face Wash</h5>
+            <p class="product-price">From $18</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="nightper.jpg" alt="Shave Cream">
+            <div class="review-stars">★★★★★ 1200 reviews</div>
+            <h5 class="product-title">Smooth Glide Shaving Cream</h5>
+            <p class="product-price">$25</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="nightper.jpg" alt="Beard Oil">
+            <div class="review-stars">★★★★★ 1375 reviews</div>
+            <h5 class="product-title">Conditioning Beard Oil</h5>
+            <p class="product-price">From $22</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-card">
+            <img src="nightper.jpg" alt="Body Lotion">
+            <div class="review-stars">★★★★★ 1150 reviews</div>
+            <h5 class="product-title">Hydrating Body Lotion</h5>
+            <p class="product-price">$30</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <footer>
+  <div class="footer-top">
+    <!-- Stay in touch -->
+    <div class="footer-col">
+      <h3>STAY IN TOUCH:</h3>
+      <p>Get exclusive deals & access to new launches. We won't spam promise</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email here">
+        <button>Subscribe</button>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-col">
+      <h3>CATEGORIES</h3>
+      <ul class="footer-links">
+        <li><a href="#">Beard</a></li>
+        <li><a href="#">Fragrance</a></li>
+        <li><a href="#">Hair</a></li>
+        <li><a href="#">Tools & Accessories</a></li>
+        <li><a href="#">Face</a></li>
+        <li><a href="#">Shave</a></li>
+        <li><a href="#">Body</a></li>
+      </ul>
+    </div>
+
+    <!-- Important Links -->
+    <div class="footer-col">
+      <h3>IMPORTANT LINKS</h3>
+      <ul class="footer-links">
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">TMC in News</a></li>
+        <li><a href="#">Our Ingredients</a></li>
+        <li><a href="#">Partner with Us</a></li>
+        <li><a href="#">B2B Bulk Buying</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h3>GET SOCIAL WITH US</h3>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div>
+      <div class="app-links">
+        <img src="gpicon2" alt="Google Play">
+        <img src="appi2" alt="App Store">
+      </div>
+    </div>
+  </div>
+
+  <!-- Most searched -->
+  <div class="most-searched">
+    <h4>MOST SEARCHED</h4>
+    <p class="keywords">
+      tan removal for men<span>EDP Hope</span><span>sunscreen for men</span><span>summer skin care</span>
+      <span>face serum for men</span><span>best body wash for men</span><span>vitamin c serum</span>
+      <span>lip balm for men</span><span>deo for men</span><span>hair wax for men</span><span>face scrub for men</span>
+      <span>shaving kit</span><span>body lotion</span><span>perfume</span><span>gift hampers</span>
+    </p>
+  </div>
+</footer>
+<script>
+    // Load cart
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Update badge count
+    function updateCartCount() {
+      const cartCount = document.getElementById("cart-count");
+      if (cartCount) cartCount.textContent = cart.length;
+    }
+
+    // Save and refresh badge
+    function saveCart() {
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+    }
+
+    // Add item to cart
+    function addToCart(product) {
+      cart.push(product);
+      saveCart();
+      alert(`${product.name} added to cart!`);
+    }
+
+    // Attach to all buttons
+    document.querySelectorAll(".product-card button").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const card = e.target.closest(".product-card");
+        const name = card.querySelector(".product-title").innerText.trim();
+        const price = card.querySelector(".product-price").innerText.trim();
+        const img = card.querySelector("img").src;
+        addToCart({ name, price, img });
+      });
+    });
+
+    // Initial update
+    updateCartCount();
+  </script>
+
+</body>
+</html>

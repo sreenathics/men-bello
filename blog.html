@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Blog Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f8f8;
+            color: #0b2d3a;
+        }
+        .main-header {
+  background-color: #082f4d;
+  padding: 10px 0;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.logo-area img {
+  width: 180px;
+  height: auto;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.home-icon {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            margin-top: 0;
+        }
+        .read-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #0a7f2e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .view-all {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .view-all button {
+            padding: 12px 30px;
+            font-size: 18px;
+            background: #6cc24a;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .faq-section {
+            max-width: 900px;
+            margin: 60px auto;
+        }
+        .faq-item {
+            margin-bottom: 40px;
+        }
+        .faq-item h2 {
+            font-size: 24px;
+        }
+
+    footer {
+      background-color:#0d324f;
+      color: #fff;
+      padding: 50px 8%;
+      position: relative;
+   
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      gap: 30px;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .footer-col h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .footer-col p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .subscribe-box {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    .subscribe-box input {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .subscribe-box button {
+      background-color: #555;
+      color: #fff;
+      border: none;
+      padding: 10px 12px;
+      font-weight: 600;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .subscribe-box button:hover {
+      background-color: #c62828;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .footer-links li a {
+      text-decoration: none;
+      color: #ccc;
+      transition: 0.3s;
+    }
+
+    .footer-links li a:hover {
+      color: #fff;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      background-color:#fff;
+      color:#a10702;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .app-links img {
+      height: 40px;
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+
+    .most-searched {
+      border-top: 1px solid #444;
+      padding-top: 25px;
+      margin-top: 25px;
+    }
+
+    .most-searched h4 {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .keywords {
+      color: #ccc;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .keywords span {
+      border-left: 1px solid #666;
+      padding-left: 6px;
+      margin-left: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .subscribe-box {
+        flex-direction: column;
+      }
+
+      .subscribe-box input,
+      .subscribe-box button {
+        width: 100%;
+        border-radius: 4px;
+      }
+
+      .subscribe-box button {
+        margin-top: 8px;
+      }
+    }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+  <div class="header-inner">
+    <a href="javascript:history.back()" class="logo-area">
+      <img src="men1.png" alt="Men Bello" />
+    </a>
+
+    <h5 class="page-title">BLOG</h5>
+
+    <a href="home.html" class="home-icon">
+      <i class="bi bi-house"></i>
+    </a>
+  </div>
+</header>
+
+
+    <div class="container">
+        <h1>Groom. Lead. Inspire</h1>
+        <p class="subtitle">Get grooming tips and tricks on your fingertips.</p>
+
+        <div class="blog-grid">
+            <div class="card">
+                <img src="beardblog" />
+                <div class="card-content">
+                    <h3>Benefits Of Beard Oil: Why Your Beard Needs It</h3>
+                    <p>Your beard is a statement. Learn why beard oil is essential for grooming.</p>
+                    <a href="#" class="read-btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="hairblog" />
+                <div class="card-content">
+                    <h3>10 Ways to fix dry hair in men in 2025 </h3>
+                    <p>Let's face it, dry hair in men is a real struggle.It can turn your mane from smooth and stylish to rough and frizzy</p>
+                    <a href="#" class="read-btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="skinblog" />
+                <div class="card-content">
+                    <h3>How To Get Clear Skin For Men On A Budget</h3>
+                    <p>Clear skin isn't just for celebrities—tips for every man.</p>
+                    <a href="#" class="read-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-all">
+            <button>View All Blogs</button>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-item">
+                <h2>What Makes Your Men’s Grooming Products Stand Out?</h2>
+                <p>Our products use high‑quality ingredients tailored for men’s unique needs.</p>
+            </div>
+            <div class="faq-item">
+                <h2>How Often Should I Use Your Grooming Products?</h2>
+                <p>Frequency depends on your routine—most products work daily.</p>
+            </div>
+            <div class="faq-item">
+                <h2>Are Your Grooming Products Tested On Animals?</h2>
+                <p>We follow cruelty‑free standards and never test on animals.</p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+  <div class="footer-top">
+    <!-- Stay in touch -->
+    <div class="footer-col">
+      <h3>STAY IN TOUCH:</h3>
+      <p>Get exclusive deals & access to new launches. We won't spam promise</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email here">
+        <button>Subscribe</button>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-col">
+      <h3>CATEGORIES</h3>
+      <ul class="footer-links">
+        <li><a href="#">Beard</a></li>
+        <li><a href="#">Fragrance</a></li>
+        <li><a href="#">Hair</a></li>
+        <li><a href="#">Tools & Accessories</a></li>
+        <li><a href="#">Face</a></li>
+        <li><a href="#">Shave</a></li>
+        <li><a href="#">Body</a></li>
+      </ul>
+    </div>
+
+    <!-- Important Links -->
+    <div class="footer-col">
+      <h3>IMPORTANT LINKS</h3>
+      <ul class="footer-links">
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">TMC in News</a></li>
+        <li><a href="#">Our Ingredients</a></li>
+        <li><a href="#">Partner with Us</a></li>
+        <li><a href="#">B2B Bulk Buying</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h3>GET SOCIAL WITH US</h3>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div>
+      <div class="app-links">
+        <img src="gpicon2" alt="Google Play">
+        <img src="appi2" alt="App Store">
+      </div>
+    </div>
+  </div>
+
+  <!-- Most searched -->
+  <div class="most-searched">
+    <h4>MOST SEARCHED</h4>
+    <p class="keywords">
+      tan removal for men<span>EDP Hope</span><span>sunscreen for men</span><span>summer skin care</span>
+      <span>face serum for men</span><span>best body wash for men</span><span>vitamin c serum</span>
+      <span>lip balm for men</span><span>deo for men</span><span>hair wax for men</span><span>face scrub for men</span>
+      <span>shaving kit</span><span>body lotion</span><span>perfume</span><span>gift hampers</span>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

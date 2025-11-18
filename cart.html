@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart - MEN BELLO</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<style>
+       footer {
+      background-color:#132942;
+      color: #fff;
+      padding: 50px 8%;
+      position: relative;
+     
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      gap: 30px;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .footer-col h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .footer-col p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .subscribe-box {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    .subscribe-box input {
+      padding: 0px 10px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .subscribe-box button {
+      background-color: #555;
+      color: #fff;
+      border: none;
+      padding: 10px 12px;
+      font-weight: 600;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .subscribe-box button:hover {
+      background-color: #c62828;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .footer-links li a {
+      text-decoration: none;
+      color: #ccc;
+      transition: 0.3s;
+    }
+
+    .footer-links li a:hover {
+      color: #fff;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      background-color: #fff;
+      color:#a10702;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .app-links img {
+      height: 40px;
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+
+    .most-searched {
+      border-top: 1px solid #444;
+      padding-top: 25px;
+      margin-top: 25px;
+    }
+
+    .most-searched h4 {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .keywords {
+      color: #ccc;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .keywords span {
+      border-left: 1px solid #666;
+      padding-left: 6px;
+      margin-left: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+       @media (max-width: 390px) {
+      .subscribe-box {
+        flex-direction: column;
+      }
+
+      .subscribe-box input,
+      .subscribe-box button {
+        width: 100%;
+        border-radius: 4px;
+      }
+
+      .subscribe-box button {
+        margin-top: 8px;
+      }
+    }
+</style>
+
+<body style="background-color:#f8f9fa;">
+
+  <!-- Header -->
+  <header class="py-2" style="background-color: #082f4d;">
+    <div class="container d-flex justify-content-between align-items-center text-white">
+      <a href="javascript:history.back()"><img src="men1.png" style="width:180px" height="30px"></a>
+      <h5 class="m-0">Your Shopping Cart</h5>
+      <a href="home.html" class="text-white fs-5"><i class="bi bi-house"></i></a>
+    </div>
+  </header>
+
+  <!-- Cart Section -->
+  <div class="container py-5">
+    <h2 class="fw-bold mb-4">Your Cart</h2>
+    <div id="cart-items" class="row g-4"></div>
+
+    <hr>
+
+    <div class="text-end">
+      <h4>Total: <span id="cart-total">$0</span></h4>
+
+      <!-- Checkout button -->
+      <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+        Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        
+        <!-- Header -->
+        <div class="modal-header" style="background:#082f4d;">
+          <h5 class="modal-title text-white">Checkout</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body">
+          <h5 class="mb-3">Order Summary</h5>
+          <p>Total Amount: <strong><span id="checkout-total"></span></strong></p>
+
+          <hr>
+
+          <h6 class="mb-3">Enter Your Details</h6>
+
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="custName">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="custPhone">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Address</label>
+            <textarea class="form-control" id="custAddress" rows="3"></textarea>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-success" onclick="placeOrder()">Place Order</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+   <footer>
+  <div class="footer-top">
+    <!-- Stay in touch -->
+    <div class="footer-col">
+      <h3>STAY IN TOUCH:</h3>
+      <p>Get exclusive deals & access to new launches. We won't spam promise</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email here">
+        <button>Subscribe</button>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-col">
+      <h3>CATEGORIES</h3>
+      <ul class="footer-links">
+        <li><a href="#">Beard</a></li>
+        <li><a href="#">Fragrance</a></li>
+        <li><a href="#">Hair</a></li>
+        <li><a href="#">Tools & Accessories</a></li>
+        <li><a href="#">Face</a></li>
+        <li><a href="#">Shave</a></li>
+        <li><a href="#">Body</a></li>
+      </ul>
+    </div>
+
+    <!-- Important Links -->
+    <div class="footer-col">
+      <h3>IMPORTANT LINKS</h3>
+      <ul class="footer-links">
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">TMC in News</a></li>
+        <li><a href="#">Our Ingredients</a></li>
+        <li><a href="#">Partner with Us</a></li>
+        <li><a href="#">B2B Bulk Buying</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h3>GET SOCIAL WITH US</h3>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div>
+      <div class="app-links">
+        <img src="gpicon2" alt="Google Play">
+        <img src="appi2" alt="App Store">
+      </div>
+    </div>
+  </div>
+
+  <!-- Most searched -->
+  <div class="most-searched">
+    <h4>MOST SEARCHED</h4>
+    <p class="keywords">
+      tan removal for men<span>EDP Hope</span><span>sunscreen for men</span><span>summer skin care</span>
+      <span>face serum for men</span><span>best body wash for men</span><span>vitamin c serum</span>
+      <span>lip balm for men</span><span>deo for men</span><span>hair wax for men</span><span>face scrub for men</span>
+      <span>shaving kit</span><span>body lotion</span><span>perfume</span><span>gift hampers</span>
+    </p>
+  </div>
+</footer>
+
+  <!-- Cart Script -->
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const container = document.getElementById("cart-items");
+    const total = document.getElementById("cart-total");
+
+    // Calculate total
+    function calculateTotal() {
+      let sum = 0;
+      cart.forEach(item => {
+        const priceValue = parseFloat(item.price.replace(/[^0-9.]/g, '')) || 0;
+        sum += priceValue * (item.quantity || 1);
+      });
+      total.textContent = `$${sum.toFixed(2)}`;
+    }
+
+    // Update quantity
+    function updateQuantity(index, change) {
+      cart[index].quantity = (cart[index].quantity || 1) + change;
+      if (cart[index].quantity < 1) cart[index].quantity = 1;
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    // Remove item
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    // Render cart items
+    function renderCart() {
+      container.innerHTML = "";
+
+      if (cart.length === 0) {
+        container.innerHTML = "<p>Your cart is empty.</p>";
+        total.textContent = "$0";
+        return;
+      }
+
+      cart.forEach((item, i) => {
+        let priceValue = parseFloat(item.price.replace(/[^0-9.]/g, "")) || 0;
+        let qty = item.quantity || 1;
+
+        container.innerHTML += `
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="${item.img}" class="card-img-top" alt="${item.name}">
+              <div class="card-body">
+                <h5 class="card-title">${item.name}</h5>
+                <p class="card-text">Price: ${item.price}</p>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(${i}, -1)">-</button>
+                  <span class="fw-bold">${qty}</span>
+                  <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(${i}, 1)">+</button>
+                </div>
+
+                <button class="btn btn-danger w-100" onclick="removeItem(${i})">Remove</button>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      calculateTotal();
+    }
+
+    renderCart();
+  </script>
+
+  <!-- Modal Script -->
+  <script>
+    function updateCheckoutTotal() {
+      document.getElementById("checkout-total").textContent =
+        document.getElementById("cart-total").textContent;
+    }
+
+    const originalCalculateTotal = calculateTotal;
+    calculateTotal = function () {
+      originalCalculateTotal();
+      updateCheckoutTotal();
+    };
+
+    function placeOrder() {
+      const name = document.getElementById("custName").value.trim();
+      const phone = document.getElementById("custPhone").value.trim();
+      const address = document.getElementById("custAddress").value.trim();
+
+      if (!name || !phone || !address) {
+        alert("Please fill all details.");
+        return;
+      }
+
+      alert("Order placed successfully! Thank you " + name + " 😊");
+
+      localStorage.removeItem("cart");
+      location.reload();
+    }
+
+    // Update modal total when the modal opens
+    document.getElementById("checkoutModal")
+      .addEventListener("shown.bs.modal", updateCheckoutTotal);
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
